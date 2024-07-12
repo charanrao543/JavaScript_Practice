@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Cookies are Data stored text files</title></head>
+    <body>
+        <!--1.In Javascript, you can use document.cookie peoperty to set and retrive cookies.
+            2.cookies are small pieces of data that atre stored on the user's computer
+            and are commonly used to store information about the user
+        -->
+
+        <button onclick="getcookie()">Click</button>
+        <script>
+            function setcookie()
+            {
+                document.cookie="All the best jan Students...!!"
+            }
+            function getcookie()
+            {
+                setcookie()
+                if(document.cookie.length==0)
+                {
+                    alert("Cookies is Not Present")
+                }
+                else{
+                    alert("Cookies is Present")
+                }
+            }
+
+        </script>
+    </body>
+</html>

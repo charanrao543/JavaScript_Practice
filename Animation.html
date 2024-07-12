@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Animation in JS</title>
+        <style>
+            #box{border: 10px solid red;
+                 height: 400px;
+                 width: 400px;
+                 background-color: yellow;}
+
+            #circle{border: 4px solid;
+                    height: 80px;
+                    width: 80px;
+                    background-color: blue;
+                    border-radius: 40px;
+                    position: absolute;
+           }     
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <div id="circle"></div>
+        </div>
+        <br>
+        <button onclick="jan_ani()">CLICK</button>
+
+        <script>
+            function jan_ani()
+            {
+                var cirlce=document.getElementById("circle")
+                var circle_px=0
+                var ani_start=setInterval(jan,5) //(function name, time)
+                function jan()
+                {
+                    if (circle_px==330)
+                    {
+                        clearInterval(ani_start)
+                    }
+                    else
+                    {
+                        circle_px++
+                        circle.style.top=circle_px+"px"
+                        circle.style.left=circle_px+"px"
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
+
+<!--
+    Notes:
+    1.SetInterval() in javaScript is used to set ythe animation on the webelement.
+    setInterval(function, time) :setInterval() accepts two arguments i,e. Function and time.
+    2.setInterval() will call the function recursively until it executes clearinterval mathod.
+    3.ClearInterval() is used to stop the animation which is started bt setInterval().
+-->

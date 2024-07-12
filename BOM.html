@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head><title>BOM</title></head>
+    <body>
+        <h3>Browser Object Model</h3>
+        <h1 id="one"></h1>
+        <h1 id="two"></h1>
+
+        <button onclick="win_open()">OPEN</button>
+        <button onclick="win_close()">CLOSE</button>
+
+        <script>
+            //Screen.height will return heigth of the browser:
+            document.getElementById("one").innerHTML="Heigth of the browser"+screen.height
+            //Screen.height will return width of the browser:
+            document.getElementById("two").innerHTML="Heigth of the browser"+screen.width
+
+            //will open new tab:
+            var win_open=function()
+            {
+                window.open("https://www.holidify.com/places/nandi-hills/")
+            }
+
+            //will close current tab:
+            var win_close=function()
+            {
+                window.close()
+            }
+        </script>
+    </body>
+</html>

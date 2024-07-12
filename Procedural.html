@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Object</title></head>
+    <body>
+        <script>
+            var fname
+            var lname
+            var fun=function(fname,lname)
+            {
+                this.fname=fname
+                this.lname=lname
+            }
+            var person=new fun("Pavan","Yuva")
+            console.log(person)
+            console.log(typeof(person))
+        </script>
+    </body>
+</html>
